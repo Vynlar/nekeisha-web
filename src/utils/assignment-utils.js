@@ -1,6 +1,11 @@
 const createAssignmentPath = node => {
   const { course, category, title } = node.frontmatter
-  return `assignments/${course}/${category}/${title.replace(/\W/g, "-")}`
+  return `assignments/${course.semester}-${course.year}/${
+    course.name
+  }/${category}/${title.replace(/\W/g, "-")}`
 }
 
-module.exports = { createAssignmentPath }
+const createCourseSlug = ({ name, year, semester }) =>
+  `${name}-${semester}-${year}`
+
+module.exports = { createAssignmentPath, createCourseSlug }

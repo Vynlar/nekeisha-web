@@ -6,10 +6,14 @@
 
 // You can delete this file if you're not using it
 
-const { createAssignmentPath } = require("./src/utils/assignment-utils")
+const {
+  createAssignmentPath,
+  createCourseSlug,
+} = require("./src/utils/assignment-utils")
 const R = require("ramda")
 
 const path = require("path")
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
   // Destructure the createPage function from the actions object
   const { createPage } = actions
@@ -24,9 +28,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             frontmatter {
               title
               points
-              due(formatString: "ddd, MMM DD - hh:mm a")
+              due: due(formatString: "ddd, MMM DD - hh:mm a")
+              rawDue: due
               category
-              course
+              course {
+                name
+                year
+                semester
+              }
             }
           }
         }
@@ -54,7 +63,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 
   // Course listing pages
-  const courses = R.uniq(
+  const courses = R.uniqBy(
+    createCourseSlug,
     assignments.map(
       ({
         node: {
@@ -66,11 +76,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   courses.forEach(course => {
     createPage({
-      path: `assignments/${course}`,
+      path: `assignments/${createCourseSlug(course)}`,
       component: path.resolve(`./src/components/assignment-list-layout.js`),
       context: {
+        course,
         assignments: assignments.filter(
-          ({ node }) => node.frontmatter.course === course
+          ({ node }) =>
+            createCourseSlug(node.frontmatter.course) ===
+            createCourseSlug(course)
         ),
       },
     })

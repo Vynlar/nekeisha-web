@@ -1,42 +1,20 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import { Flex, Box, Heading, Button } from "@chakra-ui/core"
+import { Link } from "gatsby"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+const Header = () => {
+  return (
+    <Flex as="header" justify="space-between" align="center" mb="8">
+      <Heading as="h1" size="md">
+        Nekeisha Johnson
+      </Heading>
+      <Box>
+        <Button as={Link} to="/" variant="link" variantColor="teal">
+          Home
+        </Button>
+      </Box>
+    </Flex>
+  )
 }
 
 export default Header

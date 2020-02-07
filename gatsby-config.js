@@ -1,25 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    courses: [
-      {
-        name: "MATH420",
-        year: 2020,
-        semester: "Spring",
-      },
-      {
-        name: "PHYS430",
-        year: 2020,
-        semester: "Spring",
-      },
-      {
-        name: "PHYS445",
-        year: 2020,
-        semester: "Spring",
-      },
-    ],
+    title: `Nekeisha Johnson`,
+    description: `Teaching website of Nekeisha Johnson NDSU`,
+    author: `@Vynlar`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -43,14 +26,6 @@ module.exports = {
         path: `${__dirname}/src/assignments`,
       },
     },
-    /*
-    {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: `${__dirname}/src/assignments`,
-      },
-    },
-    */
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
