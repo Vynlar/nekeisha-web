@@ -16,7 +16,7 @@ const Assignments = ({ pageContext }) => {
       <Heading size="xs" color="teal.500">
         {pageContext.course.semester} {pageContext.course.year}
       </Heading>
-      <Heading as="h1" size="2xl" mb="5">
+      <Heading as="h1" size="xl" mb="5">
         {pageContext.course.name} Assignments
       </Heading>
 

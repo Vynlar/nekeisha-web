@@ -36,7 +36,7 @@ const PostLayout = props => {
           </Tooltip>
         </Flex>
       </Heading>
-      <Heading size="2xl" mb="1">
+      <Heading size="xl" mb="1">
         {props.pageContext.frontmatter.title}
       </Heading>
       <Stack spacing="4">

@@ -34,6 +34,7 @@ module.exports = {
         gatsbyRemarkPlugins: [`gatsby-remark-prismjs`],
         defaultLayouts: {
           assignments: require.resolve(`./src/components/assignment-layout.js`),
+          default: require.resolve(`./src/components/default-layout.js`),
         },
       },
     },
