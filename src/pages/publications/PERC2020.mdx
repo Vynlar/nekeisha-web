@@ -1,23 +1,34 @@
-import { Text, Accordion, AccordionItem, AccordionHeader, AccordionIcon, AccordionPanel, Image } from '@chakra-ui/core';
+import { Flex, Box, Text, Accordion, AccordionItem, AccordionHeader, AccordionIcon, AccordionPanel, Image } from '@chakra-ui/core';
 import matrix from './PERC2020_matrix.png';
 import exampleQuestion from './example_question.png';
 import percentCorrect from './percent_correct.png';
 import NSF from './NSF.png';
 
-> ## We find evidence for **five groups** of responses that indicate students make **consistent mistakes** when **adding and subtracting** one dimensional **vectors**.
-> <br />
+<Box px={[6, 12]} py={[6, 10]} bg='teal.600' borderRadius='lg' boxShadow='lg'>
+    <Text fontSize={['2xl', '4xl']} fontWeight='normal' color='white'>
+        We find evidence for <strong>five groups</strong> of responses that indicate students make <strong>consistent mistakes</strong> when <strong>adding and subtracting</strong> one dimensional <strong>vectors</strong>.
+    </Text>
+    <Image borderRadius="9%" src={matrix} mx='auto' mt='8' mb='6' />
+</Box>
 
-<Image borderRadius="9%" src={matrix} mx='auto' my='10' />
+<br />
 
 ### Examining consistency of student errors in vector operations using module analysis
 
-<Text fontSize='lg'>
-    Nekeisha Johnson, John B. Buncher
-</Text>
+<Flex direction={['column', 'row']} mt='4' spacing='4'>
+    <Box bg='gray.50' py='4' px='6' borderRadius='md' border='1px' borderColor='gray.200' mb={[4, 0]} mr={[0, 4]}>
+        <Text fontWeight='bold' color='teal.500'>Nekeisha Johnson</Text>
+        <Text>nekeisha.johnson@ndsu.edu</Text>
+    </Box>
+    <Box bg='gray.50' py='4' px='6' borderRadius='md' border='1px' borderColor='gray.200'>
+        <Text fontWeight='bold' color='teal.500'>John B. Buncher</Text>
+        <Text>john.buncher@ndsu.edu</Text>
+    </Box>
+</Flex>
 
-<Text color='gray.500'>North Dakota State University</Text>
+<Text color='gray.500' mt='2'>North Dakota State University &bull; PERC2020</Text>
 
-
+<br />
 
 ### Background
 ---
@@ -34,12 +45,16 @@ appropriate [2]. We use module analysis to examine
 if students make consistent mistakes across
 different types of vector problems.
 
+<br />
+
 ### Methods
 ---
 
 1. Data were collected from four classes of introductory physics students (algebra-based, physics I and II) who responded to a series of multiple-choice, one-dimensional vector addition and subtraction questions
 2. Using Module Analysis for Multiple Choice Responses [3] the results for each individual course were plotted as a network and local communities were found.
 3. These communities were then analyzed across all four courses, to examine stability of the groupings. This stability is represented visually as a heat map (at right)
+
+<br />
 
 ### Naming Scheme
 ---
@@ -49,6 +64,8 @@ operation prompt (±), the set of original vectors A
 and B (1-6), and the directions of A and B that could
 be properly added to yield the given resultant
 vector (:±A±B).
+
+<br />
 
 ### Results
 ---
@@ -73,25 +90,27 @@ each of these groups in the full paper
 - Two of the classes that took this assessment also had a variety of two-dimensional questions, which are being analyzed using the same process.
 - A later class was given handwritten versions of some of the two-dimensional questions, which we hope will aid in classifying the groups we find from the two-dimensional multiple-choice questions
 
+<br />
+
 ### Additional Images
 
-#### Example question
+##### Example question
 
 Question (“+1”) with each of the four
 responses. In this case, option a) is (+1:+A+B),
 option b) is (+1:+A-B), option c) is (+1:-A-B), and
 option d) is (+1:-A+B).
 
-<Image src={exampleQuestion} mx='auto' maxW='sm' mt='4' />
+<Image src={exampleQuestion} mx='auto' maxW='sm' w='100%' mt='4' />
 
-#### Percent Correct
+##### Percent Correct
 
 Comparison of percentage of students getting each
 problem correct across all four courses. Students
 performed much better on addition than
 subtraction.
 
-<Image src={percentCorrect} mx='auto' maxW='xl' mt='4' />
+<Image src={percentCorrect} mx='auto' w='100%' maxW='xl' mt='4' />
 
 ### References
 
@@ -103,6 +122,8 @@ Addition Method on 2-D Vector Addition Tasks
 
 [3] Brewe et al., Using module analysis for multiple choice responses:
 A new method applied to Force Concept Inventory data
+
+<br />
 
 ### Acknowledgements
 
