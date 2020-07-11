@@ -1,4 +1,4 @@
-import { Flex, Box, Text, Accordion, AccordionItem, AccordionHeader, AccordionIcon, AccordionPanel, Image } from '@chakra-ui/core';
+import { Flex, PseudoBox, Box, Text, Accordion, AccordionItem, AccordionHeader, AccordionIcon, AccordionPanel, Image } from '@chakra-ui/core';
 import matrix from './PERC2020_matrix.png';
 import exampleQuestion from './example_question.png';
 import percentCorrect from './percent_correct.png';
@@ -16,14 +16,14 @@ import NSF from './NSF.png';
 ### Examining consistency of student errors in vector operations using module analysis
 
 <Flex direction={['column', 'row']} mt='4' spacing='4'>
-    <Box bg='white' py='4' px='6' borderRadius='md' border='1px' borderColor='gray.200' mb={[4, 0]} mr={[0, 4]}>
+    <PseudoBox as='a' href='mailto:nekeisha.johnson@ndsu.edu' _hover={{ bg: 'teal.50', borderColor: 'teal.200' }} bg='gray.50' py='4' px='6' borderRadius='md' border='1px' borderColor='gray.200' mb={[4, 0]} mr={[0, 4]}>
         <Text fontWeight='bold' color='teal.500'>Nekeisha Johnson</Text>
         <Text>nekeisha.johnson@ndsu.edu</Text>
-    </Box>
-    <Box bg='white' py='4' px='6' borderRadius='md' border='1px' borderColor='gray.200'>
+    </PseudoBox>
+    <PseudoBox as='a' href='mailto:john.buncher@ndsu.edu' _hover={{ bg: 'teal.50', borderColor: 'teal.200' }} bg='gray.50' py='4' px='6' borderRadius='md' border='1px' borderColor='gray.200' mb={[4, 0]} mr={[0, 4]}>
         <Text fontWeight='bold' color='teal.500'>John B. Buncher</Text>
         <Text>john.buncher@ndsu.edu</Text>
-    </Box>
+    </PseudoBox>
 </Flex>
 
 <Text color='gray.500' mt='2'>North Dakota State University &bull; PERC2020</Text>
