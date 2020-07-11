@@ -29,6 +29,16 @@ const Header = () => {
 
   const links = [
     <Button
+      key="publications"
+      as={Link}
+      to="/publications"
+      variant="link"
+      variantColor="teal"
+    >
+      Publications
+    </Button>,
+
+    <Button
       key="teaching"
       as={Link}
       to="/teaching"

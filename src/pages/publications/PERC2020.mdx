@@ -1,0 +1,115 @@
+import { Text, Accordion, AccordionItem, AccordionHeader, AccordionIcon, AccordionPanel, Image } from '@chakra-ui/core';
+import matrix from './PERC2020_matrix.png';
+import exampleQuestion from './example_question.png';
+import percentCorrect from './percent_correct.png';
+import NSF from './NSF.png';
+
+> ## We find evidence for **five groups** of responses that indicate students make **consistent mistakes** when **adding and subtracting** one dimensional **vectors**.
+> <br />
+
+<Image borderRadius="9%" src={matrix} mx='auto' my='10' />
+
+### Examining consistency of student errors in vector operations using module analysis
+
+<Text fontSize='lg'>
+    Nekeisha Johnson, John B. Buncher
+</Text>
+
+<Text color='gray.500'>North Dakota State University</Text>
+
+
+
+### Background
+---
+
+Successful manipulation of vector quantities is
+critical to success in introductory physics courses.
+Prior work has demonstrated key aspects of these
+struggles, highlighting that more than 1 in 4
+students were unable to add two-dimensional
+vectors following a year of instruction [1} and
+students tend to stick with one method of solving,
+even when another method may be more
+appropriate [2]. We use module analysis to examine
+if students make consistent mistakes across
+different types of vector problems.
+
+### Methods
+---
+
+1. Data were collected from four classes of introductory physics students (algebra-based, physics I and II) who responded to a series of multiple-choice, one-dimensional vector addition and subtraction questions
+2. Using Module Analysis for Multiple Choice Responses [3] the results for each individual course were plotted as a network and local communities were found.
+3. These communities were then analyzed across all four courses, to examine stability of the groupings. This stability is represented visually as a heat map (at right)
+
+### Naming Scheme
+---
+
+The naming scheme defines responses as the
+operation prompt (±), the set of original vectors A
+and B (1-6), and the directions of A and B that could
+be properly added to yield the given resultant
+vector (:±A±B).
+
+### Results
+---
+
+The brightest patches in the heat map were
+examined to identify any possible trends. Of these
+bright patches, we find five groups:
+
+1. 7 responses, with 4 that follow the same pattern (-Q:-A+B)
+2. 6 responses, with 5 that follow the same pattern (-Q:+A+B)
+3. 6 responses, with 4 that are related as both (+Q:-A-B) and (-Q:-A-B) for questions – that is, two identical sets of vectors
+4. 6 responses, with 4 that match a single pattern (+Q:+A-B)
+5. 5 responses, with 4 that follow the same pattern (-Q:-A-B)
+
+We offer plausible explanations for the trends in
+each of these groups in the full paper
+
+## More Details
+
+### Future Work
+
+- Two of the classes that took this assessment also had a variety of two-dimensional questions, which are being analyzed using the same process.
+- A later class was given handwritten versions of some of the two-dimensional questions, which we hope will aid in classifying the groups we find from the two-dimensional multiple-choice questions
+
+### Additional Images
+
+#### Example question
+
+Question (“+1”) with each of the four
+responses. In this case, option a) is (+1:+A+B),
+option b) is (+1:+A-B), option c) is (+1:-A-B), and
+option d) is (+1:-A+B).
+
+<Image src={exampleQuestion} mx='auto' maxW='sm' mt='4' />
+
+#### Percent Correct
+
+Comparison of percentage of students getting each
+problem correct across all four courses. Students
+performed much better on addition than
+subtraction.
+
+<Image src={percentCorrect} mx='auto' maxW='xl' mt='4' />
+
+### References
+
+[1] Nguyen and Meltzer, Initial understanding of vector concepts
+among students in introductory physics courses
+
+[2] Hawkins et al., Students’ Consistency of Graphical Vector
+Addition Method on 2-D Vector Addition Tasks
+
+[3] Brewe et al., Using module analysis for multiple choice responses:
+A new method applied to Force Concept Inventory data
+
+### Acknowledgements
+
+<Image float='right' src={NSF} width='100px' />
+
+Material based on work supported by NSF DUE 1560142
+Any opinions, findings, conclusions, or recommendations
+expressed in this material are those of the authors and do
+not necessarily reflect the views of NSF.
+
