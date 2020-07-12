@@ -1,7 +1,16 @@
+import { Link } from 'gatsby';
+import { Box, Stack, Badge, PseudoBox } from "@chakra-ui/core";
+
 # Publications
 
 ---
 
-> #### [Examining consistency of student errors in vector operations using module analysis](/publications/PERC2020)
->
-> **PERC 2020** Nekeisha Johnson, John B. Buncher
+<Link to='/publications/PERC2020'>
+    <Stack as='article' bg='teal.50' p='6' border='1px' borderLeft='8px solid' borderColor='teal.300' borderRadius='md' mt='6'>
+        <Box fontWeight='bold' fontSize='lg'>Examining consistency of student errors in vector operations using module analysis</Box>
+        <Stack isInline alignItems='baseline'>
+            <Box>Nekeisha&nbsp;Johnson, John&nbsp;B.&nbsp;Buncher</Box>
+            <Badge variant='solid' variantColor='teal'>PERC 2020</Badge>
+        </Stack>
+    </Stack>
+</Link>

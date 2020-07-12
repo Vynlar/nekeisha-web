@@ -28,6 +28,10 @@ const Header = () => {
   `)
 
   const links = [
+    <Button key="home" as={Link} to="/" variant="link" variantColor="teal">
+      Home
+    </Button>,
+
     <Button
       key="publications"
       as={Link}
@@ -38,6 +42,7 @@ const Header = () => {
       Publications
     </Button>,
 
+    /*
     <Button
       key="teaching"
       as={Link}
@@ -47,16 +52,7 @@ const Header = () => {
     >
       Teaching
     </Button>,
-
-    <Button
-      key="about"
-      as={Link}
-      to="/about"
-      variant="link"
-      variantColor="teal"
-    >
-      About
-    </Button>,
+     */
   ]
 
   const menuState = useDisclosure()

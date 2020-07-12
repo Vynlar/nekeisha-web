@@ -1,1 +1,32 @@
-# Anything you want!
+import { Text, Button, Stack, Flex, Box, Heading, Badge } from '@chakra-ui/core';
+import { Link } from 'gatsby';
+
+<Flex height='70vh' alignItems='center'>
+    <Flex flexDirection={['column', null, 'row']} alignItems='baseline'>
+        <Stack alignItems='flex-start' spacing='2'>
+            <Box>
+                <Text fontSize='sm' fontWeight='bold' color='gray.500'>I AM</Text>
+                <Heading fontSize='5xl'>Nekeisha Johnson</Heading>
+            </Box>
+            <Stack isInline alignItems='baseline' flexWrap='wrap'>
+                <Badge fontSize='md' variantColor='teal' mb='2'>PhD Student</Badge>
+                <Box fontSize='md'>in</Box>
+                <Badge fontSize='md' variantColor='teal' mb='2'>Physics Education Research</Badge>
+                <Box fontSize='md'>at</Box>
+                <Badge fontSize='md' variantColor='teal'>North Dakota State University</Badge>
+            </Stack>
+        </Stack>
+        <Stack spacing='2' mt={[8, null, 0]}>
+            <Text fontSize='sm' fontWeight='bold' color='gray.500'>LATEST PUBLICATION</Text>
+            <Link to='/publications/PERC2020'>
+                <Stack as='article' bg='teal.50' p='6' border='1px' borderLeft='8px solid' borderColor='teal.300' borderRadius='md'>
+                    <Box fontWeight='bold' fontSize='lg'>Examining consistency of student errors in vector operations using module analysis</Box>
+                    <Stack isInline alignItems='baseline'>
+                        <Box>Nekeisha&nbsp;Johnson, John&nbsp;B.&nbsp;Buncher</Box>
+                        <Badge variant='solid' variantColor='teal'>PERC 2020</Badge>
+                    </Stack>
+                </Stack>
+            </Link>
+        </Stack>
+    </Flex>
+</Flex>
